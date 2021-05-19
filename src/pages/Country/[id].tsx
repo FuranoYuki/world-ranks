@@ -7,7 +7,7 @@ import CountryInfo from "../../components/CountryInfo";
 import CountryDetails from "../../components/CountryDetails";
 import Footer from "../../components/Footer";
 
-import { Container } from "./styles";
+import { Container } from "../../styles/Country";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch("https://restcountries.eu/rest/v2/all");
