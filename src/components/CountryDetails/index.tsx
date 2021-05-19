@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 
 import {
@@ -30,10 +30,6 @@ const CountryDetails: React.FC<Props> = ({
   gini,
   borders,
 }) => {
-  useEffect(() => {
-    console.log(borders);
-  }, [borders]);
-
   return (
     <Container>
       <Details>
@@ -63,7 +59,7 @@ const CountryDetails: React.FC<Props> = ({
         <NeighboorHeader>Neighbouring Countries</NeighboorHeader>
         <Countries>
           {borders.map((data) => (
-            <ImgBox key={data.index}>
+            <ImgBox key={data.alpha3Code}>
               <Image
                 src={data.flag}
                 alt={data.name}

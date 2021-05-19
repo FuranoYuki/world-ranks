@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ interface Props {
   population: number;
   area: number;
   gini: number;
-  cioc: string;
+  alpha3Code: string;
 }
 
 const ListCard: React.FC<Props> = ({
@@ -19,11 +18,11 @@ const ListCard: React.FC<Props> = ({
   population,
   area,
   gini,
-  cioc,
+  alpha3Code,
 }) => {
   return (
     <Container>
-      <Link href={`/Country/${cioc}`}>
+      <Link href={`/Country/${alpha3Code}`}>
         <a>
           <Name>
             <img src={flag} alt={name} />

@@ -134,13 +134,13 @@ const HomeLayout: React.FC<Props> = ({ countries }) => {
             )
             .map((country) => (
               <ListCard
-                key={country.index}
+                key={country.alpha3Code}
                 flag={country.flag}
                 name={country.name}
                 population={country.population}
                 area={country.area}
                 gini={country.gini}
-                cioc={country.cioc}
+                alpha3Code={country.alpha3Code}
               />
             ))}
       </Table>
