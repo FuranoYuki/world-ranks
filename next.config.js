@@ -1,5 +1,5 @@
 module.exports = {
-  target: "serveless",
+  target: 'serveless',
   images: {
     domains: ["restcountries.eu"],
   },
